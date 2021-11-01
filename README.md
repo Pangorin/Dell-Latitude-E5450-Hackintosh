@@ -36,8 +36,36 @@ The drivers, kexts, and SSDTs I used are as follows:
     * USBInjectAll.kext
     * IntelMausi.kext
     * IntelSnowMausi.kext
-    * USBInjectAll (required when installing macOS)
+    * USBInjectAll (required when installing macOS, you can delete this kext after you map your USB and replace it with USBMap you generated)
     * VoodooI2C.kext
     * VoodooI2CHID.kext
     * VoodooPS2Controller.kext
     * SATA-unsupported.kext
+
+  - SSDT:
+    * SSDT-PLUG-DRTNIA.aml
+    * SSDT-EC-LAPTOP.aml
+    * SSDT-PNLF.aml
+
+## OpenCore Configuration
+
+Follow the OpenCore Install Guide to [setup the config.plist](https://dortania.github.io/OpenCore-Install-Guide/config.plist/) and [configure for Intel Broadwell Laptops](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/broadwell.html#starting-point).
+> - If you have no audio, please find another `layout-id`.
+> - Where to find my `layout-id`? [AppleALC Supported Codecs](https://github.com/acidanthera/AppleALC/wiki/Supported-codecs).
+
+| SMBIOS          | CPU Type           | GPU Type      | Display size |
+| ----------------| -------------------|---------------|--------------|
+| `MacBookAir7,2` | Dual Core 15W      | iGPU: HD 6000 | 13"          |
+
+This SMBIOS is suitable for our Dell, because our laptop's CPU has similar TDP compare to the MacBook Air early 2015 and Mid 2017.
+
+## BIOS Setting\
+- Enable:
+  * Hyper-Threading
+  * SATA Mode: AHCI (or RAID, your choice)
+- Disable:
+  * Fast Boot
+  * Secure Boot
+  * Serial/COM Port
+  * Parallel Port
+  * Intel Platform Trust
