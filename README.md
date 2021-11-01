@@ -1,5 +1,7 @@
 # How to build an EFI for Dell Latitude E5450
 This guide will help you make your ol' Dell laptop become a MacBook Air, and say goodbye Windows!
+* Notes: before copying the EFI into USB boot drive, make sure your have copy the Resources folder from OpenCorePkg into the EFI/OC folder. And you need a mouse to install macOS first, once you've done the installation process, head to this guide: [Fixing trackpads](https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad.html) in order to make the trackpad working.
+
 ## Preparation
 * Time
 * Some Google-ing skills
@@ -69,7 +71,5 @@ This SMBIOS is suitable for our Dell, because our laptop's CPU has similar TDP c
   * Secure Boot
   * Serial/COM Port
   * Parallel Port
-  * Intel Platform Trust'
- yi
-* Some notes: before copying the EFI into USB boot drive, make sure your have copy the Resources folder from OpenCorePkg into the EFI/OC folder. And you need a mouse to install macOS first, once you've done the installation process, head to this guide: [Fixing trackpads](https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad.html) in order to make the trackpad working.
+  * Intel Platform Trust
 
