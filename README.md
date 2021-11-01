@@ -59,7 +59,7 @@ Follow the OpenCore Install Guide to [setup the config.plist](https://dortania.g
 
 This SMBIOS is suitable for our Dell, because our laptop's CPU has similar TDP compare to the MacBook Air early 2015 and Mid 2017.
 
-## BIOS Setting\
+## BIOS Setting
 - Enable:
   * Hyper-Threading
   * SATA Mode: AHCI (or RAID, your choice)
