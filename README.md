@@ -46,6 +46,7 @@ The drivers, kexts, and SSDTs I used are as follows:
     * SSDT-PLUG-DRTNIA.aml
     * SSDT-EC-LAPTOP.aml
     * SSDT-PNLF.aml
+    * SSDT-GPI0.aml (this SSDT does not included in the EFI, you have to patching it when you have installed macOS)
 
 ## OpenCore Configuration
 
@@ -68,4 +69,7 @@ This SMBIOS is suitable for our Dell, because our laptop's CPU has similar TDP c
   * Secure Boot
   * Serial/COM Port
   * Parallel Port
-  * Intel Platform Trust
+  * Intel Platform Trust'
+ yi
+* Some notes: before copying the EFI into USB boot drive, make sure your have copy the Resources folder from OpenCorePkg into the EFI/OC folder. And you need a mouse to install macOS first, once you've done the installation process, head to this guide: [Fixing trackpads](https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad.html) in order to make the trackpad working.
+
